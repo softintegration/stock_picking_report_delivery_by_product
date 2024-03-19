@@ -74,11 +74,13 @@
                                     <span t-esc="move['product_id'].display_name"/>
                                 </td>
                                 <td>
-                                    <span t-esc="move['product_uom_qty']"/>
+                                    <span t-esc="move['product_uom_qty']"
+                                          t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"/>
                                     <span t-esc="move['product_uom'].name"/>
                                 </td>
                                 <td>
-                                    <span t-esc="move['quantity_done']"/>
+                                    <span t-esc="move['quantity_done']"
+                                          t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"/>
                                     <span t-esc="move['product_uom'].name"/>
                                 </td>
                             </tr>

@@ -15,9 +15,6 @@
     'demo': [],
     'depends': ['stock'],
     'data': [
-        #'data/report_paperformat_data.xml',
-        #'data/stock_quant_package_report_custom_formats_data.xml',
-        #'report/report_package_barcode.xml',
         'report/stock_report_views.xml',
         'report/report_deliveryslip_by_product.xml'
     ],
