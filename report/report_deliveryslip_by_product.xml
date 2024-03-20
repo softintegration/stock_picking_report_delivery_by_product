@@ -60,9 +60,16 @@
                         </div>
                     </div>
                     <table class="table table-sm"  name="stock_move_by_product_table">
+                        <t t-set="has_serial_number" t-value="False"/>
+                        <t t-set="has_serial_number" t-value="o.move_line_ids and o.state=='done' and o.move_line_ids.mapped('lot_id')" groups="stock.group_lot_on_delivery_slip"/>
                         <thead>
                             <tr>
                                 <th name="th_sm_product"><strong>Product</strong></th>
+                                <t name="lot_serial" t-if="has_serial_number">
+                                    <th>
+                                        Lot/Serial Number
+                                    </th>
+                                </t>
                                 <th name="th_sm_ordered"><strong>Ordered</strong></th>
                                 <th name="th_sm_quantity"><strong>Delivered</strong></th>
                             </tr>
@@ -73,6 +80,16 @@
                                 <td>
                                     <span t-esc="move['product_id'].display_name"/>
                                 </td>
+                                <t t-if="has_serial_number" name="stock_move_by_product_table">
+                                    <t t-set="serial_numbers" t-value="move['serial_numbers']"/>
+                                    <td>
+                                        <table>
+                                            <tr t-foreach="serial_numbers" t-as="serial_num">
+                                                <td><span t-esc="serial_num.name"/></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </t>
                                 <td>
                                     <span t-esc="move['product_uom_qty']"
                                           t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"/>

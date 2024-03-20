@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 11:11+0000\n"
-"PO-Revision-Date: 2024-03-19 11:11+0000\n"
+"POT-Creation-Date: 2024-03-20 08:39+0000\n"
+"PO-Revision-Date: 2024-03-20 08:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,8 @@ msgid ""
 "'Delivery Slip by product - %s - %s' % (object.partner_id.name or '', "
 "object.name)"
 msgstr ""
-"'Bon de livraison par article - %s - %s' % (object.partner_id.name or '', object.name)"
+"'Bon de livraison par article - %s - %s' % (object.partner_id.name or '', "
+"object.name)"
 
 #. module: stock_picking_report_delivery_by_product
 #: model_terms:ir.ui.view,arch_db:stock_picking_report_delivery_by_product.report_delivery_document
@@ -42,7 +43,6 @@ msgstr "<span><strong>Adresse du fournisseur :</strong></span>"
 #: model_terms:ir.ui.view,arch_db:stock_picking_report_delivery_by_product.report_delivery_document
 msgid "<span><strong>Warehouse Address:</strong></span>"
 msgstr "<span><strong>Adresse de l'entrepôt:</strong></span>"
-
 
 #. module: stock_picking_report_delivery_by_product
 #: model_terms:ir.ui.view,arch_db:stock_picking_report_delivery_by_product.report_delivery_document
@@ -72,12 +72,17 @@ msgstr "<strong>Date d'expédition:</strong>"
 #. module: stock_picking_report_delivery_by_product
 #: model_terms:ir.ui.view,arch_db:stock_picking_report_delivery_by_product.report_delivery_document
 msgid "<strong>Signature</strong>"
-msgstr "<strong>Signature</strong>"
+msgstr ""
 
 #. module: stock_picking_report_delivery_by_product
 #: model:ir.actions.report,name:stock_picking_report_delivery_by_product.action_report_delivery_by_product
 msgid "Delivery Slip by product"
 msgstr "Bon de livraison par article"
+
+#. module: stock_picking_report_delivery_by_product
+#: model_terms:ir.ui.view,arch_db:stock_picking_report_delivery_by_product.report_delivery_document
+msgid "Lot/Serial Number"
+msgstr "Lot/numéro de série"
 
 #. module: stock_picking_report_delivery_by_product
 #: model:ir.model,name:stock_picking_report_delivery_by_product.model_stock_picking
